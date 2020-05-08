@@ -1,0 +1,207 @@
+﻿@model HotelBookingWebApp.ViewModel.RoomViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/IndexScript.js"></script>
+<link href="~/Content/stylosIndexRoom.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/8c0de1faf5.js" crossorigin="anonymous"></script>
+
+
+<div class="slider">
+    <div class="slide current">
+        <div class="content">
+            <h1>Slider One</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores eius amet, odio aperiam enim,
+                accusamus unde exercitationem.
+            </p>
+            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content">
+            <h1>Slider Two</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores eius amet, odio aperiam enim,
+                accusamus unde exercitationem.
+            </p>
+            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content">
+            <h1>Slider Three</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores eius amet, odio aperiam enim,
+                accusamus unde exercitationem.
+            </p>
+
+            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        </div>
+
+    </div>
+    <div class="slide">
+        <div class="content">
+            <h1>Slider Four</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores eius amet, odio aperiam enim,
+                accusamus unde exercitationem.
+            </p>
+            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content">
+            <h1>Slider Five</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores eius amet, odio aperiam enim,
+                accusamus unde exercitationem.
+
+            </p>
+            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="content ">
+            <h1>Slider Six</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores eius amet, odio aperiam enim,
+                accusamus unde exercitationem.
+            </p>
+            <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        </div>
+    </div>
+</div>
+<div class="buttons">
+    <button id="prev"><i class="fas fa-angle-double-left"></i></button>
+    <button id="next"><i class="fas fa-angle-double-right"></i></button>
+</div>
+<script src="~/Scripts/functionsScript.js"></script>
+
+@*Modal Open AddRoom*@
+<div id="btnTogle" style="margin-top:20px">
+    <button type="button" class="btn btn-block , btn-primary" style="text-align:center;margin-bottom:5px" data-toggle="modal" data-target="#divAddRoom" data-backdrop="static" data-keyboard="false">Add Room</button>
+</div>
+<div id="divAddRoom" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background:rgb(51, 50, 50)">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" style="outline: none">&times;</button> @*  x  para salir*@
+                <h4 class="modal-title" style="text-align:center;font-size:20px">Room</h4>
+                <form id="formRoom">
+                    <div class="modal-body" style="margin-top:10px">
+                        @Html.HiddenFor(model => model.RoomId, new { @id = "txtRoomId" })
+                        <div class="form-group col-md-6">
+                            <div style="text-align:center">@Html.LabelFor(model => model.RoomNumber)</div>
+                            @Html.TextBoxFor(model => model.RoomNumber, new { @class = "form-control", id = "txtRoomNumber" })
+                            @Html.ValidationMessageFor(model => model.RoomNumber, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div style="text-align:center">
+                                @Html.LabelFor(model => model.RoomPrice)
+                            </div>
+                            @Html.TextBoxFor(model => model.RoomPrice, new { @class = "form-control", id = "txtRoomPrice" })
+                            @Html.ValidationMessageFor(model => model.RoomPrice, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div style="text-align:center">
+                                @Html.LabelFor(model => model.BookingStatusId)
+                            </div>
+                            @Html.DropDownListFor(model => model.BookingStatusId, Model.ListOfBookingStatus, new { @class = "form-control", id = "ddBookingStatus" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div style="text-align:center">
+                                @Html.LabelFor(model => model.RoomTypeId)
+                            </div>
+                            @Html.DropDownListFor(model => model.RoomTypeId, Model.ListOfRoomType, new { @class = "form-control", id = "ddRoomType" })
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div style="text-align:center">
+                                @Html.LabelFor(model => model.RoomCapacity)
+                            </div>
+                            @Html.TextBoxFor(model => model.RoomCapacity, new { @class = "form-control", id = "txtRoomCapacity" })
+                            @Html.ValidationMessageFor(model => model.RoomCapacity, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div style="text-align:center">
+                                @Html.LabelFor(model => model.RoomDescription)
+                            </div>
+                            @Html.TextBoxFor(model => model.RoomDescription, new { @class = "form-control", id = "txtRoomDescription" })
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div style="text-align:center">
+                                <div style="text-align:center">
+                                    @Html.LabelFor(model => model.RoomImage)
+                                    @Html.ValidationMessageFor(model => model.RoomImage, null, new { @class = "text-danger" })
+                                </div>
+                                <input id="UpLoadImg" type="file" class="form-control" name="RoomImage" value="Load Image" onchange="DisplayImage(this)" />
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div>
+                                <img id="imagRoom" height="180px" width="255px" style="border:transparent ; margin-top:10px" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnSave" class="btn btn-success btn-block" style="float:left">Save</button> &nbsp;
+                <button id="closed" type="button" data-dismiss="modal" class="btn btn-danger btn-block" style="float:right">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="margin-top:30px"></div>
+<div id="idRoomLoadDetails">
+</div>
